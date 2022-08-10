@@ -15,6 +15,8 @@ Welcome to DATA606! Your instructors will be [Dr. Jason Bryer](https://bryer.org
 
 * [Join the Slack channel by clicking here](https://join.slack.com/t/data606fall2022/shared_invite/zt-1ddw97uao-7M9JWWBPHjf0B_WdqJ8B8Q) (or use your @sps.cuny.edu email address). This will be our primary mode of communication. For private communications, you can either send private Slack messages or email us at [jason.bryer@cuny.edu](mailto:jason.bryer@cuny.edu) and [angela.lui@cuny.edu](mailto:angela.lui@cuny.edu).
 
+* Complete the self-regulated learning assessment in DAACS. Visit [/assignments/daacs/](/assignments/daacs/) for more information.
+
 * Once you go through the syllabus, try starting Lab 1 as soon as you can. This will require you to install R and RStudio and will help get you get acquainted with R. See the [software page](/course-overview/software/) for more information about the software we will use for this course.
 
 * The best way to reach us is on Slack. If you would prefer to talk on the phone or setup a Zoom session, it is best to suggest some times by email first.
