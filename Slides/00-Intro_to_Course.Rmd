@@ -37,7 +37,7 @@ class: center, middle, inverse, title-slide
 ### `r metadata$author`
 ### `r metadata$date`
 
-
+---
 class: hide-logo, bottom, right, title-slide
 background-image: url(images/Greetings_from_Statistics.jpeg)
 background-size: contain
@@ -168,16 +168,16 @@ knitr::include_graphics('images/Sleeping_Empire.jpg')
 
 # Syllabus `r hexes(c('blogdown', 'rmarkdown'))`
 
-Syllabus and course materials are here: [https://spring2022.data606.net](https://spring2022.data606.net)
+Syllabus and course materials are here: [https://fall2022.data606.net](https://fall2022.data606.net)
 
-The site is built using the [Blogdown](https://bookdown.org/yihui/blogdown/) R package and hosted on [Github](https://github.com/jbryer/DATA606Spring2022). Each page of the site has a "Improve this page" link at the bottom right, use that to start a pull request on Github.
+The site is built using the [Blogdown](https://bookdown.org/yihui/blogdown/) R package and hosted on [Github](https://github.com/jbryer/DATA606Fall2022). Each page of the site has a "Improve this page" link at the bottom right, use that to start a pull request on Github.
 
 We will use Blackboard primary for submitting assignments only. Please submit:
 
 * A PDF or link to the built HTML (e.g. Rpubs, [Github](http://htmlpreview.github.io/))
 
 PDFs are preferred for the homework as there is some LaTeX formatting in the R markdown files. The `tineytex` R package helps with install LaTeX, but you can also install LaTeX using [MiKTeX](http://miktex.org) (for Windows) and [BasicTeX](http://www.tug.org/mactex/morepackages.html) (for Mac) See this page for more information: 
-https://spring2022.data606.net/course-overview/software/
+https://fall2022.data606.net/course-overview/software/
 
 ---
 class: font90
@@ -186,7 +186,7 @@ class: font90
 
 We will have meetups on Wednesday evenings at 8:00pm. 
 
-Meetups will be recorded and made available the next day on the [course website](https://spring2022.data606.net/course-overview/meetups/).
+Meetups will be recorded and made available the next day on the [course website](https://fall2022.data606.net/course-overview/meetups/).
 
 Though attending live is not strictly required, **We expect everyone to watch the lectures during the week.** I use the class meetups to convey important information and announcements. Very often I will cover some topics not in the textbook. Students who attend the meetups tend to do well on the assignments.
 
@@ -215,7 +215,7 @@ library(lubridate)
 
 options(knitr.kable.NA = '')
 
-semester <- 'Spring 2021'
+semester <- 'Fall 2022'
 
 palette <- c('#8dd3c7','#ffffb3','#bebada','#fb8072','#80b1d3','#fdb462',
 			 '#b3de69','#fccde5','#d9d9d9','#bc80bd','#ccebc5','#ffed6f')
@@ -287,7 +287,7 @@ This will be our primary textbook for most of the semesters. Our goal is to cove
 
 .center[
 
-<a href = "https://github.com/jbryer/DATA606Spring2022/blob/master/Resources/Textbooks/os4.pdf"><img src = 'images/openintro.jpeg' alt = 'Open Intro Statistics' height = '375px' /></a>
+<a href = "https://github.com/jbryer/DATA606Fall2022/blob/master/Resources/Textbooks/os4.pdf"><img src = 'images/openintro.jpeg' alt = 'Open Intro Statistics' height = '375px' /></a>
 
 ]
 
@@ -305,7 +305,7 @@ This textbooks has a chapter on Bayesian analysis that we will use at the end of
 
 .center[
 
-<a href = "https://github.com/jbryer/DATA606Spring2022/blob/master/Resources/Textbooks/lsr-0.6.pdf"><img src = 'images/lsr.png' alt = 'Learning Statistics with R' height = '375px' /></a>
+<a href = "https://github.com/jbryer/DATA606Fall2022/blob/master/Resources/Textbooks/lsr-0.6.pdf"><img src = 'images/lsr.png' alt = 'Learning Statistics with R' height = '375px' /></a>
 
 ]
 
@@ -316,14 +316,14 @@ This textbooks has a chapter on Bayesian analysis that we will use at the end of
 # Assignments
 
 * Participation (10%)
-	* [DAACS](https://spring2022.data606.net/assignments/daacs)
-	* [One Minute Papers](https://spring2022.data606.net/assignments/participation)
-* [Labs](https://spring2022.data606.net/assignments/labs) (35%)
+	* [DAACS](https://fall2022.data606.net/assignments/daacs)
+	* [One Minute Papers](https://fall2022.data606.net/assignments/participation)
+* [Labs](https://fall2022.data606.net/assignments/labs) (35%)
 	* Labs are designed to introduce to you doing statistics with R.
 	* Answer the questions in the main text as well as the "On Your Own" section.
-* [Data Project](https://spring2022.data606.net/assignments/project) (30%)
+* [Data Project](https://fall2022.data606.net/assignments/project) (30%)
 	* This allows you to analyze a dataset of your choosing. Projects will be shared with the class. This provides an opportunity for everyone to see different approaches to analyzing different datasets.
-* [Exams](https://spring2022.data606.net/assignments/exams/)
+* [Exams](https://fall2022.data606.net/assignments/exams/)
 	* Midterm (10%)
 	* Final exam (15%)
 
@@ -331,11 +331,9 @@ This textbooks has a chapter on Bayesian analysis that we will use at the end of
 
 # Communication
 
-* Slack Channel: https://data606spring2022.slack.com
-	* [Click here to join the group](https://join.slack.com/t/data606spring2022/shared_invite/zt-tqeu5u6e-qIimBoChX2oyvCJLovewWg)
+* Slack Channel: https://data606fall2022.slack.com
+	* [Click here to join the group](https://join.slack.com/t/data606fall2022/shared_invite/zt-1ddw97uao-7M9JWWBPHjf0B_WdqJ8B8Q)
 	
-* There is a general CUNY MSDS Slack channel [click here](https://join.slack.com/t/data606spring2022/shared_invite/zt-tqeu5u6e-qIimBoChX2oyvCJLovewWg) to join it.
-
 * Github Issues - Use this for issues or problems with the `DATA606` package: https://github.com/jbryer/DATA606/issues
 
 * Email: [jason.bryer@cuny.edu](mailto:jason.bryer@cuny.edu) and [angela.lui@cuny.edu](mailto:angela.lui@cuny.edu)
@@ -353,7 +351,7 @@ This is an applied statistics course so we will make extensive use of the [R sta
 * CUNY SPS has an RStudio Server that you can access using a browser: https://rstudio.sps.cuny.edu  
   You will use your CUNY login credentials to log in.
 
-* Install [R](https://cran.r-project.org) and [RStudio](https://rstudio.com) on your own computer. I encourage everyone to do this at some point by the end of the semester. I have instructions on the course website here: https://spring2022.data606.net/course-overview/software/
+* Install [R](https://cran.r-project.org) and [RStudio](https://rstudio.com) on your own computer. I encourage everyone to do this at some point by the end of the semester. I have instructions on the course website here: https://fall2022.data606.net/course-overview/software/
 
 You will also need to have [LaTeX](https://www.latex-project.org) installed as well in order to create PDFs. The [`tinytex`](https://yihui.org/tinytex/) R package helps with this process:
 
@@ -383,7 +381,7 @@ This will copy the R markdown file and any supporting files to your current work
 ---
 # Next steps... `r hexes(c('DAACS'))`
 
-Before Monday (January 31st):
+Before Monday (August 29th):
 
 * Complete this Google form: https://forms.gle/ikB64cJjcGUadqZWA
 * Create an account at https://my.daacs.net and complete the self-regulated learning assessment
@@ -391,7 +389,7 @@ Before Monday (January 31st):
 
 Then:
 
-* Start Lab 1 (due February 6th)
+* Start Lab 1 (due September 4th)
 
 ---
 class: inverse, right, middle, hide-logo
@@ -402,10 +400,10 @@ class: inverse, right, middle, hide-logo
 
 [`r icons::fontawesome("paper-plane")` jason.bryer@cuny.edu](mailto:jason.bryer@cuny.edu)  
 [`r icons::fontawesome("paper-plane")` angela.lui@cuny.edu](mailto:angela.lui@cuny.edu)  
-[`r icons::fontawesome("slack")` data606spring2022.slack.com](https://data606spring2022.slack.com)  
+[`r icons::fontawesome("slack")` data606fall2022.slack.com](https://data606fall2022.slack.com)  
 [`r icons::fontawesome("github")` @jbryer](https://github.com/jbryer)  
 [`r icons::fontawesome("github")` @angelalui11](https://github.com/angelalui11)  
 [`r icons::fontawesome("twitter")` @jbryer](https://twitter.com/jbryer)  
-[`r icons::fontawesome("link")` spring2022.data606.net](https://spring2022.data606.net)   
+[`r icons::fontawesome("link")` fall2022.data606.net](https://fall2022.data606.net)   
 
 
