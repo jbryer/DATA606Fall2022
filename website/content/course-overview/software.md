@@ -13,7 +13,7 @@ We will make use of [R](http://r-project.org), an open source statistics program
 * R - download for [Windows](http://cran.r-project.org/bin/windows/base/), [Mac](http://cran.r-project.org/bin/macosx/), or [Linux](https://cran.r-project.org).
 * RStudio - [Download Windows, Mac, or Linux versions from here](https://rstudio.com/products/rstudio/download/#download)
 
-If using Windows, you also need to download [RTools](http://cran.r-project.org/bin/windows/Rtools/) and [ActivePerl](https://www.activestate.com/products/activeperl/downloads/).
+If using Windows, you also need to download [RTools](http://cran.r-project.org/bin/windows/Rtools/).
 
 
 ### LaTeX
