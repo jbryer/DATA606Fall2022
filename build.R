@@ -46,7 +46,7 @@ for(i in tocopy) {
 		if(build_pdf) {
 			wd <- setwd('Slides/')
 			tryCatch({
-				xaringanBuilder::build_pdf(i,
+				renderthis::to_pdf(i,
 						  complex_slides = TRUE,
 						  partial_slides = FALSE)
 			}, error = function(e) {
