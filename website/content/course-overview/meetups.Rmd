@@ -38,7 +38,7 @@ Join Zoom Meeting:  http://zoom.data606.net or https://us02web.zoom.us/j/8646282
 [Presentation Signup Sheet](https://docs.google.com/spreadsheets/d/1l_-D8hw5jRKRsjnolijVxEcB-mTHGHMjGo-595iur8g/edit?usp=sharing)
 -->
 
-**[One Minute Paper](https://forms.gle/cdit7TEfNTdJyozP6) - Complete this Google form after each class meetup (whether attended live or watched the recording).**
+**[One Minute Paper](https://forms.gle/v5spVhm6XZd6jTwN9) - Complete this Google form after each class meetup (whether attended live or watched the recording).**
 
 ```{r schedule-table, echo=FALSE, results='asis'}
 # meetups$Date <- format(meetups$Date, '%a, %b %d')
