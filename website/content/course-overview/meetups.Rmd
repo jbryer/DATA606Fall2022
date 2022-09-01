@@ -27,7 +27,7 @@ meetups$fill <- NA
 ```
 
 
-There will be weekly meetups. You are encouraged to attend as many as you can but recordings will generally be availabe the day after the meetup.
+There will be weekly meetups. You are encouraged to attend as many as you can but recordings will generally be available the day after the meetup.
 
 Join Zoom Meeting:  http://zoom.data606.net or https://us02web.zoom.us/j/86462823125  
 

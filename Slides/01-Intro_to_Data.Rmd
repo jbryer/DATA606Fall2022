@@ -30,14 +30,23 @@ editor_options:
 source('config.R', local = TRUE)
 ```
 
+class: center, middle, inverse, title-slide
+
+# `r metadata$title`
+## `r metadata$subtitle`
+### `r metadata$author`
+### `r metadata$date`
+
+---
 # Announcements
 
+* Sorry that some had difficulties completing DAACS. We will pull the results and enter them into Blackboard before next week.
 
 * Lab 1 is due Sunday.
 	
 * Labs - When submitting the labs, you can submit just add your answers to the existing document (i.e. you can leave all the text there so you have all the content together).
 
-* We added homework problems to the course website. These will not be graded. The answers are at the end of the textbook. Successfully completing these will help you prepare for the midterm and final exams. https://spring2022.data606.net/assignments/homework_ungraded/
+* We added homework problems to the course website. These will not be graded. The answers are at the end of the textbook. Successfully completing these will help you prepare for the midterm and final exams. https://fall2022.data606.net/assignments/homework_ungraded/
 
 * Link to RStudio cheat sheets: https://rstudio.com/resources/cheatsheets/
 
@@ -47,7 +56,7 @@ source('config.R', local = TRUE)
 ```{r, echo = FALSE, cache = TRUE, message = FALSE, warning = FALSE}
 library(googlesheets4)
 
-results <- read_sheet('https://docs.google.com/spreadsheets/d/1Ig9qdkV_SnJutSqR_87vOdHiw5rr0nhE0ao1MKft3Uo/edit?resourcekey#gid=1675807648') %>% as.data.frame()
+results <- read_sheet('https://docs.google.com/spreadsheets/d/1mb2uPbZto0Bff0fF8PJksruqrVhrSRYQ9qTE28mGaz4/edit?resourcekey#gid=1727977695') %>% as.data.frame()
 mass.items <- c('I find math interesting.',
 				'I get uptight during math tests.',
 				'I think that I will use math in the future.',
@@ -62,7 +71,7 @@ mass.items <- c('I find math interesting.',
 				'Math is one of my favorite subjects.',
 				'I enjoy learning with mathematics.',
 				'Mathematics makes me feel confused.')
-mass.results <- results[,4:17]
+mass.results <- results[,5:18]
 for(i in 1:ncol(mass.results)) {
 	mass.results[,i] <- factor(mass.results[,i],
 						  levels = c('Strongly Disagree', 'Disagree', 'Neutral',
@@ -89,7 +98,7 @@ stats.items <- c('Descriptive Statistics',
                  'R',
                  'Python')
 
-stats.results <- results[,18:34]
+stats.results <- results[,19:35]
 for(i in 1:ncol(stats.results)) {
 	stats.results[,i] <- factor(stats.results[,i],
 						  levels = c('Not at all familiar', 'Sligtly familiar',
@@ -114,23 +123,6 @@ likert(mass.results) %>% plot()
 ```
 
 
----
-# New DAACS Self-Efficacy Items `r hexes(c('daacs'))`
-
-**Soliciting your feedback**
-
-1. Describe how you interpreted these questions. For example, what context did you think about when answering these questions? Refer to specific items if needed.
-
-2. Were these items confusing in any way? Which ones? How?
-
-3. What suggestions do you have on how you might improve these items for clarity (e.g., wording, formatting)?
-
-Please provide your feedback here: https://forms.gle/bFsFbfiLDeqrcxZL6  
-This is not a graded exercise, you would be helping us out by completing this survey.
-
-.small[
-For more info on the DAACS SRL assessment, see [Lui, A., Franklin, D., Akhmedjanova, D., Gorgun, G., Bryer, J., Andrade, H., & Cleary, T. (2018). Validity evidence of the internal structure of the DAACS Self-Regulated Learning Survey. *Future Review: International Journal of Transition, College, and Career Success, 1*(1), 1-18.](https://secureservercdn.net/198.71.233.37/f0s.3d9.myftpupload.com/wp-content/uploads/2020/03/Future-Review-Issue-1.pdf)
-]
 
 ---
 # Validity and Reliability
@@ -353,7 +345,7 @@ thedata$RCT_Value <- as.numeric(apply(thedata, 1,
 tab.out <- describeBy(thedata$RCT_Value, group = thedata$RCT_Assignment, mat = TRUE, skew = FALSE)
 ```
 
-```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.align='center'}
+```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.align='center', fig.height=10}
 ggplot(thedata) + 
 	geom_segment(aes(x = placebo, xend = treatment, y = id, yend = id)) +
 	geom_point(aes(x = placebo, y = id), color = 'blue') +
@@ -374,7 +366,7 @@ ggplot(thedata) +
 
 .pull-left[
 
-```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.align='center'}
+```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.align='center', fig.height=10}
 ggplot(thedata) + 
 	geom_segment(aes(x = placebo, xend = treatment, y = id, yend = id)) +
 	geom_point(aes(x = placebo, y = id), color = 'blue') +
@@ -388,7 +380,7 @@ ggplot(thedata) +
 
 .pull-right[
 
-```{r echo=FALSE, message=FALSE, warning=FALSE, fig.align='center'}
+```{r echo=FALSE, message=FALSE, warning=FALSE, fig.align='center', fig.height=10}
 ggplot(thedata, aes(x = RCT_Value, color = RCT_Assignment, y = id)) +
 	geom_point() +
 	scale_color_manual(values = c('placebo' = 'blue', 'treatment' = 'red')) +
