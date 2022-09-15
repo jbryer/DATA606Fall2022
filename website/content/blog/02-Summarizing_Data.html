@@ -1,7 +1,7 @@
 ---
-title: "Summarizing Data Part 1"
+title: "Summarizing Data Part 2"
 author: "Jason Bryer and Angela Lui"
-date: 2022-09-07
+date: 2022-09-14
 draft: false
 categories: ["Meetups"]
 tags: ["Annoucement"]
@@ -10,9 +10,74 @@ tags: ["Annoucement"]
 
 
 <p><a href="/slides/02-Summarizing_Data.html#1">Click here</a> to open the slides (<a href="/slides/02-Summarizing_Data.pdf">PDF</a>).</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Hu0-cNTcnuQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/mZwF_TLieQE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 </iframe>
 <!--more-->
 <p><a href="/slides/02-Summarizing_Data.html#1">Click here</a> to open the slides (<a href="/slides/02-Summarizing_Data.pdf">PDF</a>).</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Hu0-cNTcnuQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/mZwF_TLieQE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 </iframe>
+<pre><code>library(magrittr)
+library(dplyr)
+
+data(mtcars)
+str(mtcars)
+
+mtcars$gear %&gt;%
+    table() %&gt;%
+    prop.table()
+
+`%&gt;%`(mtcars$gear, table)
+
+`+`
+2 + 3
+`+`(2, 3)
+
+`+` &lt;- function(e1, e2) {
+    print(&#39;Happy April Fools!&#39;)
+}
+
+2 + 3
+
+a &lt;- 2 + 4
+a = 2 + 4
+a
+
+tab &lt;- mtcars$gear %&gt;%
+    table() %&gt;%
+    prop.table()
+tab
+
+mtcars$gear %&gt;%
+    table() %&gt;%
+    prop.table() -&gt; 
+    tab
+tab
+
+letters %in% c(&#39;a&#39;,&#39;e&#39;,&#39;i&#39;,&#39;o&#39;,&#39;u&#39;)
+letters %in% c(&#39;a&#39;,&#39;e&#39;,&#39;i&#39;,&#39;o&#39;,&#39;u&#39;) %&gt;% which()
+
+mtcars %&gt;%
+    filter(mpg &gt; 20 &amp; cyl == 6) %&gt;%
+    select(mpg, wt)
+
+filter(mtcars, mpg &gt; 20 &amp; cyl == 6) %&gt;% select(mpg, wt)
+
+head(mtcars, n = 3)
+tail(mtcars)
+
+mtcars %&gt;% head(n = 3) %&gt;% rename(miles_per_gallon = mpg)
+mtcars2 &lt;- mtcars %&gt;% rename(miles_per_gallon = mpg)
+head(mtcars2)
+
+mtcars2[1, &#39;miles_per_gallon&#39;] &lt;- 0
+mtcars2$cyl / mtcars2$miles_per_gallon
+
+mtcars2[1, &#39;miles_per_gallon&#39;] &lt;- NA
+mean(mtcars2$miles_per_gallon)
+mean(mtcars2$miles_per_gallon, na.rm = TRUE)
+
+4 / 2
+4 / NA
+NA / 4
+4 / 0 # Why is this Inf
+0 / 4</code></pre>
