@@ -1,7 +1,7 @@
 ---
-title: "Summarizing Data Part 1"
+title: "Summarizing Data Part 2"
 author: "Jason Bryer and Angela Lui"
-date: 2022-09-07
+date: 2022-09-14
 draft: false
 categories: ["Meetups"]
 tags: ["Annoucement"]
@@ -10,13 +10,13 @@ tags: ["Annoucement"]
 
 [Click here](/slides/02-Summarizing_Data.html#1) to open the slides ([PDF](/slides/02-Summarizing_Data.pdf)).
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Hu0-cNTcnuQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/mZwF_TLieQE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <!--more-->
 
 [Click here](/slides/02-Summarizing_Data.html#1) to open the slides ([PDF](/slides/02-Summarizing_Data.pdf)).
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Hu0-cNTcnuQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/mZwF_TLieQE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 
