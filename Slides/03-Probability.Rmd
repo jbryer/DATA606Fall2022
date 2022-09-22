@@ -362,6 +362,73 @@ for(j in seq_along(runs)) {
 mean(runs)
 ```
 
+---
+# Note on Randomization in R
+
+We will use many different functions throughout the course to randomly generate data. The first is the `sample` function. This function simply randomly samples from the first parameter. Consider the `letters` vector containing the 26 letters of the alphabet. Calling `sample` with just that vector will shuffle the vector.
+
+```{r}
+letters
+sample(letters)
+```
+
+---
+#  Note on Randomization in R  (cont.)
+
+You can specify how many you want to return with the `size` parameter.
+
+```{r}
+sample(letters, size = 1)
+```
+
+The `replace` will ensure that each randomly selected value is independent of the others.
+
+```{r}
+sample(letters, size = 30, replace = TRUE)
+```
+
+---
+# Coins Example
+
+```{r}
+coin <- c('H', 'T')
+sample(coin)
+sample(coin, 1)
+sample(coin, 100, replace = TRUE)
+```
+
+---
+# Seeds
+
+Computers are generally not good at randomizaiton. Instead, R (and really all programs) uses a [pseudo random algorithm](https://en.wikipedia.org/wiki/Pseudorandomness). These algorithms rely on a seed, or starting point for the algorithm. You can set the seed to ensure that your analysis is reproducible. For example, setting the seed below before calling `sample` will ensure we get the same answer.
+
+```{r}
+set.seed(2112); sample(100, 1)
+set.seed(2112); sample(100, 1)
+```
+
+---
+# Is it really random?
+
+```{r}
+df <- data.frame(x = 1:1000, y = NA_integer_)
+for(i in 1:nrow(df)) {
+	set.seed(i)
+	df[i,]$y <- sample(100, 1)
+}
+```
+
+.pull-left[
+```{r}
+ggplot(df, aes(x = x, y = y)) + geom_point()
+```
+]
+
+.pull-right[
+```{r}
+cor.test(df$x, df$y)
+```
+]
 
 ---
 # One Minute Paper
