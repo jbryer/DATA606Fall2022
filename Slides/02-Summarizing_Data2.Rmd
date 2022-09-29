@@ -261,32 +261,6 @@ plot(l24, type='heat')
 plot(l24, type='density')
 ```
 
----
-class: font90
-# Dual Scales `r hexes(c('shiny'))`
-
-Some problems<sup>1</sup>:
-
-* The designer has to make choices about scales and this can have a big impact on the viewer
-* "Cross-over points” where one series cross another are results of the design choices, not intrinsic to the data, and viewers (particularly unsophisticated viewers)
-* They make it easier to lazily associate correlation with causation, not taking into account autocorrelation and other time-series issues
-* Because of the issues above, in malicious hands they make it possible to deliberately mislead
-
-This example looks at the relationship between NZ dollar exchange rate and trade weighted index.
-
-```{r, eval=FALSE}
-DATA606::shiny_demo('DualScales', package='DATA606')
-```
-
-My advise:
-
-* Avoid using them. You can usually do better with other plot types.
-* When necessary (or compelled) to use them, rescale (using z-scores, we'll discuss this in a few weeks)
-
-.font50[
-<sup>1</sup> http://blog.revolutionanalytics.com/2016/08/dual-axis-time-series.html  
-<sup>2</sup> http://ellisp.github.io/blog/2016/08/18/dualaxes
-]
 
 ---
 # Pie Charts
