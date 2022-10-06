@@ -1,0 +1,23 @@
+---
+title: "Foundation for Inference"
+author: "Jason Bryer and Angela Lui"
+date: 2022-10-05
+draft: false
+categories: ["Meetups"]
+tags: ["Annoucement"]
+---
+
+
+[Click here](/slides/05-Foundation_for_Inference.html#1) to open the slides ([PDF](/slides/05-Foundation_for_Inference.pdf)).
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/tasHzSopGf8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<!--more-->
+
+[Click here](/slides/05-Foundation_for_Inference.html#1) to open the slides ([PDF](/slides/05-Foundation_for_Inference.pdf)).
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/tasHzSopGf8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+Here is the Calculus video I was referring to: https://www.youtube.com/watch?v=WUvTyaaNkzM&t=34s
+I do also highly recommend StatQuest for other topics as well: https://www.youtube.com/c/joshstarmer/featured
+
