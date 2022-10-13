@@ -61,6 +61,16 @@ The `infer` package.
 * Package website: https://infer.tidymodels.org
 
 
+---
+
+.pull-left[
+
+
+&lt;img src="06-Inference_for_Categorical_Data_files/figure-html/unnamed-chunk-5-1.png" style="display: block; margin: auto;" /&gt;
+]
+.pull-right[
+&lt;img src='images/2022ChicagoMarathon.jpg' height='550' alt='Chicago Marathon Finish' /&gt;
+]
 
 
 ---
@@ -311,7 +321,7 @@ In order to determine if the `\(\chi^2\)` statistic we calculated is considered 
 
 * The chi-square distribution has just one parameter called **degrees of freedom (df)**, which influences the shape, center, and spread of the distribution.
 
-&lt;img src="06-Inference_for_Categorical_Data_files/figure-html/unnamed-chunk-4-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="06-Inference_for_Categorical_Data_files/figure-html/unnamed-chunk-6-1.png" style="display: block; margin: auto;" /&gt;
 
 ---
 # Degrees of freedom for a goodness of fit test
@@ -323,7 +333,7 @@ When conducting a goodness of fit test to evaluate how well the observed data fo
 For dice outcomes, `\(k = 6\)`, therefore `\(df = 6 - 1 = 5\)`
 
 
-&lt;img src="06-Inference_for_Categorical_Data_files/figure-html/unnamed-chunk-5-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="06-Inference_for_Categorical_Data_files/figure-html/unnamed-chunk-7-1.png" style="display: block; margin: auto;" /&gt;
 
 p-value = `\(P(\chi^2_{df = 5} &gt; 24.67)\)` is less than 0.001
 
@@ -347,7 +357,7 @@ p-value = `\(P(\chi^2_{df = 5} &gt; 24.67)\)` is less than 0.001
 * This is because the test statistic is always positive, and a higher test statistic means a stronger deviation from the null hypothesis.
 
 
-&lt;img src="06-Inference_for_Categorical_Data_files/figure-html/unnamed-chunk-6-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="06-Inference_for_Categorical_Data_files/figure-html/unnamed-chunk-8-1.png" style="display: block; margin: auto;" /&gt;
 
 
 ---
@@ -400,7 +410,7 @@ mean(sampA$response)
 ```
 
 ```
-## [1] 0.529
+## [1] 0.553
 ```
 
 `\(\hat{p}\)` for the population sample, excluding group B 
@@ -411,7 +421,7 @@ mean(sampA[sampA$group == 'A',]$response)
 ```
 
 ```
-## [1] 0.5247225
+## [1] 0.5526316
 ```
 
 `\(\hat{p}\)` for group B sample
@@ -422,7 +432,7 @@ mean(sampB$response)
 ```
 
 ```
-## [1] 0.71
+## [1] 0.62
 ```
 
 ---
@@ -430,7 +440,7 @@ mean(sampB$response)
 
 
 
-&lt;img src="06-Inference_for_Categorical_Data_files/figure-html/unnamed-chunk-13-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="06-Inference_for_Categorical_Data_files/figure-html/unnamed-chunk-15-1.png" style="display: block; margin: auto;" /&gt;
 
 
 
