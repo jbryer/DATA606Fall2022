@@ -26,7 +26,6 @@ class: center, middle, inverse, title-slide
 ---
 # Midterm Results
 
-* Results on Blackboard range between 0 and 200. Can divide by 2 to get a percentage score.
 * The midterm is worth 10% of your grade.
 * We don't want to share the questions and answers but will provide feedback privately (if you ask questions) and will review questions in the next week or two.
 
@@ -51,6 +50,25 @@ class: center, middle, inverse, title-slide
 &lt;img src="07-Inference_for_Numerical_Data_files/figure-html/unnamed-chunk-5-1.png" style="display: block; margin: auto;" /&gt;
 ]
 
+---
+
+# Data Project Proposal
+
+Due October 30&lt;sup&gt;rd&lt;/sup&gt;ish Select a dataset that interests you. For the proposal, you need to answer the questions below.
+
+.font80[
+* Research question
+* What type of statistical test do you plan to do (e.g. t-test, ANOVA, regression, logistic regression, chi-squared, etc.)
+* What are the cases, and how many are there?
+* Describe the method of data collection.
+* What type of study is this (observational/experiment)?
+* Data Source: If you collected the data, state self-collected. If not, provide a citation/link.
+* Response: What is the response variable, and what type is it (numerical/categorical)?
+* Explanatory: What is the explanatory variable(s), and what type is it (numerical/categorical)?
+* Relevant summary statistics
+]
+
+More information including template and suggested datasets located here: https://fall2022.data606.net/assignments/project/
 
 
 
@@ -445,16 +463,11 @@ desc
 ```
 
 ```
-##     item             Method vars n  mean       sd min max range        se
-## X11    1      Alcohol Spray    1 8  37.5 26.55991   5  82    77  9.390345
-## X12    2 Antibacterial Soap    1 8  92.5 41.96257  20 164   144 14.836008
-## X13    3               Soap    1 8 106.0 46.95895  51 207   156 16.602496
-## X14    4              Water    1 8 117.0 31.13106  74 170    96 11.006492
-##           Var
-## X11  705.4286
-## X12 1760.8571
-## X13 2205.1429
-## X14  969.1429
+##     item             Method vars n  mean       sd min max range        se       Var
+## X11    1      Alcohol Spray    1 8  37.5 26.55991   5  82    77  9.390345  705.4286
+## X12    2 Antibacterial Soap    1 8  92.5 41.96257  20 164   144 14.836008 1760.8571
+## X13    3               Soap    1 8 106.0 46.95895  51 207   156 16.602496 2205.1429
+## X14    4              Water    1 8 117.0 31.13106  74 170    96 11.006492  969.1429
 ```
 
 .pull-left[
@@ -522,16 +535,11 @@ desc
 ```
 
 ```
-##     item             Method vars n  mean       sd min max range        se
-## X11    1      Alcohol Spray    1 8  37.5 26.55991   5  82    77  9.390345
-## X12    2 Antibacterial Soap    1 8  92.5 41.96257  20 164   144 14.836008
-## X13    3               Soap    1 8 106.0 46.95895  51 207   156 16.602496
-## X14    4              Water    1 8 117.0 31.13106  74 170    96 11.006492
-##           Var contrast
-## X11  705.4286   -50.75
-## X12 1760.8571     4.25
-## X13 2205.1429    17.75
-## X14  969.1429    28.75
+##     item             Method vars n  mean       sd min max range        se       Var contrast
+## X11    1      Alcohol Spray    1 8  37.5 26.55991   5  82    77  9.390345  705.4286   -50.75
+## X12    2 Antibacterial Soap    1 8  92.5 41.96257  20 164   144 14.836008 1760.8571     4.25
+## X13    3               Soap    1 8 106.0 46.95895  51 207   156 16.602496 2205.1429    17.75
+## X14    4              Water    1 8 117.0 31.13106  74 170    96 11.006492  969.1429    28.75
 ```
 
 ---
@@ -707,6 +715,20 @@ class: font120
 | Total                   | `\(\sum^{}_{k} \sum^{}_{i} (\bar{x}_{ik} -\bar{x} )^{2}\)`      | n - 1 |                                      |                                     |                                |
 
 
+
+```r
+aov(Bacterial_Counts ~ Method, data = hand_washing) |&gt; summary()
+```
+
+```
+##             Df Sum Sq Mean Sq F value  Pr(&gt;F)   
+## Method       3  29882    9961   7.064 0.00111 **
+## Residuals   28  39484    1410                   
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+```
+
+
 ---
 # Assumptions and Conditions
 
@@ -738,6 +760,7 @@ Shiny app:
 ```r
 remotes::install_github('jbryer/VisualStats')
 library(VisualStats)
+library(ShinyDemo)
 shiny_demo('anova', package = 'VisualStats')
 ```
 
@@ -775,7 +798,7 @@ ggplot(hand_washing, aes(x = Method, y = Bacterial_Counts)) + geom_boxplot() +
 	geom_point(data = tab, aes(x = group1, y = mean), color = 'blue', size = 3)
 ```
 
-&lt;img src="07-Inference_for_Numerical_Data_files/figure-html/unnamed-chunk-41-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="07-Inference_for_Numerical_Data_files/figure-html/unnamed-chunk-42-1.png" style="display: block; margin: auto;" /&gt;
 ]
 
 ---
@@ -793,7 +816,7 @@ ggplot(hand_washing, aes(x = Method, y = Bacterial_Counts)) + geom_boxplot() +
 	geom_point(data = tab, aes(x = group1, y = mean), color = 'blue', size = 3)
 ```
 
-&lt;img src="07-Inference_for_Numerical_Data_files/figure-html/unnamed-chunk-42-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="07-Inference_for_Numerical_Data_files/figure-html/unnamed-chunk-43-1.png" style="display: block; margin: auto;" /&gt;
 ]
 
 ---
@@ -811,7 +834,7 @@ ggplot(hand_washing, aes(x = Method, y = Bacterial_Counts)) + geom_boxplot() +
 	geom_point(data = tab, aes(x = group1, y = mean), color = 'blue', size = 3)
 ```
 
-&lt;img src="07-Inference_for_Numerical_Data_files/figure-html/unnamed-chunk-43-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="07-Inference_for_Numerical_Data_files/figure-html/unnamed-chunk-44-1.png" style="display: block; margin: auto;" /&gt;
 ]
 
 

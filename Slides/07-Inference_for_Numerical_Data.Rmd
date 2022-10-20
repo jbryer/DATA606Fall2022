@@ -28,6 +28,7 @@ editor_options:
 # dplyr based upon https://allisonhorst.shinyapps.io/dplyr-learnr/#section-welcome
 
 source('config.R')
+options(width = 120)
 ```
 
 class: center, middle, inverse, title-slide
@@ -40,7 +41,6 @@ class: center, middle, inverse, title-slide
 ---
 # Midterm Results
 
-* Results on Blackboard range between 0 and 200. Can divide by 2 to get a percentage score.
 * The midterm is worth 10% of your grade.
 * We don't want to share the questions and answers but will provide feedback privately (if you ask questions) and will review questions in the next week or two.
 
@@ -101,6 +101,25 @@ ompWordCloud(omp$`What important question remains unanswered for you?`)
 ```
 ]
 
+---
+
+# Data Project Proposal
+
+Due October 30<sup>rd</sup>ish Select a dataset that interests you. For the proposal, you need to answer the questions below.
+
+.font80[
+* Research question
+* What type of statistical test do you plan to do (e.g. t-test, ANOVA, regression, logistic regression, chi-squared, etc.)
+* What are the cases, and how many are there?
+* Describe the method of data collection.
+* What type of study is this (observational/experiment)?
+* Data Source: If you collected the data, state self-collected. If not, provide a citation/link.
+* Response: What is the response variable, and what type is it (numerical/categorical)?
+* Explanatory: What is the explanatory variable(s), and what type is it (numerical/categorical)?
+* Relevant summary statistics
+]
+
+More information including template and suggested datasets located here: https://fall2022.data606.net/assignments/project/
 
 
 
@@ -804,6 +823,11 @@ class: font120
 | Total                   | $\sum^{}_{k} \sum^{}_{i} (\bar{x}_{ik} -\bar{x} )^{2}$      | n - 1 |                                      |                                     |                                |
 
 
+```{r}
+aov(Bacterial_Counts ~ Method, data = hand_washing) |> summary()
+```
+
+
 ---
 # Assumptions and Conditions
 
@@ -834,6 +858,7 @@ Shiny app:
 ```{r, eval=FALSE}
 remotes::install_github('jbryer/VisualStats')
 library(VisualStats)
+library(ShinyDemo)
 shiny_demo('anova', package = 'VisualStats')
 ```
 
