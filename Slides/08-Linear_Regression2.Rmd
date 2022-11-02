@@ -38,6 +38,15 @@ class: center, middle, inverse, title-slide
 ### `r metadata$date`
 
 ---
+# Announcements
+
+**Project Presentations**
+
+You can sign up for a presentation slot on this Google Sheet: https://docs.google.com/spreadsheets/d/13BMf7h8PF3bboEYIIxWwj2PFadMOc05sySb3Lgfs2so/edit?usp=sharing
+
+Example project slides located here: 
+
+---
 # One Minute Paper Results
 
 ```{r, echo=FALSE}

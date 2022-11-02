@@ -1,7 +1,10 @@
 ---
 title: 'Example Project: Hanging Chads'
 author: "Jason Bryer, Ph.D."
-output: ioslides_presentation
+output: 
+  ioslides_presentation:
+    smaller: true
+    widescreen: true
 ---
 
 ```{r setup, include=FALSE}
@@ -21,6 +24,8 @@ elections <- read.table("../course_data/2000elections.txt", header=TRUE)
 ```{r, echo=FALSE}
 source('../course_data/fl_counties.R')
 elections$County_Name <- fl.counties
+library(urbnmapr)
+data("counties")
 ```
 
 There are `r nrow(elections)` counties in Florida that cast at total of `r prettyNum(sum(elections$bush), big.mark = ',')` votes for George Bush and `r prettyNum(sum(elections$gore), ',')` resulting in Bush winning by `r sum(elections$bush) - sum(elections$gore)` votes.
@@ -31,7 +36,6 @@ However, in the days following the election there was much controversy surroundi
 
 ```{r, echo = FALSE, fig.width = 8, fig.height = 6}
 library(tidyverse)
-library(urbnmapr)
 elections <- elections %>% 
 	mutate(difference = bush - gore,
 		   percent_bush = bush / (bush + gore))
@@ -162,8 +166,7 @@ Therefore, what we can say is that it is likely that Palm Beach is a different c
 <img src='Palm_Beach_Ballot.png' alt='Palm Beach Ballot' height = '550' />
 
 
----
-# References
+## References
 
 Wand, J.N., Shotts, K.W., Sekhon, J.S., Mebane, W.R., Herron, M.C., & Brady, H.E. (2001). [The Butterfly Did It: The Aberrant Vote for Buchanan in Palm Beach County, Florida](http://sekhon.berkeley.edu/papers/butterfly.pdf). *American Political Science Reviw, 95*(4).
 
