@@ -21,6 +21,12 @@ Navarro, D. (2018, version 0.6). *Learning Statistics with R*
 
 #### Recommended
 
+[OpenStax.org](https://openstax.org/) is a great resource for free textbooks. The following books will be helpful to have as a reference and to supplement, and get an alternative explanition, for many of the topics covered in this course:
+
+* [Statstics](https://openstax.org/details/books/introductory-statistics)
+* [Calculus](https://openstax.org/details/books/calculus-volume-1) - We will very briefly explain the concepts of limits, derivatives, and integrals that underlie some important statistical concepts. This books will provide much more detail.
+* [College Algebra](https://openstax.org/details/books/college-algebra) - For those who need a refresher in algebra, this is a good resource.
+
 Wickham, H., & Grolemund, G. (2016) *R for Data Science*. O'Reilly.
 
 > Most of this books is available freely online at [r4ds.had.co.nz/](http://r4ds.had.co.nz/) but can be purchased from [Amazon](https://www.amazon.com/R-Data-Science-Hadley-Wickham/dp/1491910399/ref=as_li_ss_tl?ie=UTF8&qid=1469550189&sr=8-1&keywords=R+for+data+science&linkCode=sl1&tag=devtools-20&linkId=6fe0069f9605cf847ed96c191f4e84dd).
