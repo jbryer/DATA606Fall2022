@@ -62,44 +62,6 @@ ompWordCloud(omp$`What important question remains unanswered for you?`)
 ]
 
 
----
-class: inverse, middle, center
-# Data Project
-
----
-class: font90
-# Checklist / Suggested Outline
-
-* Abstract (300 word maximum)
-* Overview slide
-	* Context on the data collection
-	* Description of the dependent variable (what is being measured)
-	* Description of the independent variable (what is being measured; include at least 2 variables)
-	* Research question
-* Summary statistics
-* Include appropriate data visualizations.
-* Statistical output
-	* Include the appropriate statistics for your method used.
-	* For null hypothesis tests (e.g. t-test, chi-squared, ANOVA, etc.), state the null and alternative hypotheses along with relevant statistic and p-value (and confidence interval if appropriate).
-	* For regression models, include the regression output and interpret the R-squared value.
-* Conclusion
-	* Why is this analysis important?
-	* Limitations of the analysis?
-
----
-# Criteria for Grading
-
-* Data is presented to support the conslusions using the appropriate analysis (i.e. the statistical method chosen supports the research question).
-
-* Suitable tables summarize data in a clear and meaningful way even to those unfamiliar with the project.
-
-* Suitable graphics summarize data in a clear and meaningful way even to those unfamiliar with the project.
-
-* Data reviewed and analyzed accurately and coherently.
-
-* Proper use of descriptive and/or inferential statistics.
-
-Full rubric available here: https://fall2022.data606.net/assignments/project/
 
 ---
 # Weight of Books
@@ -148,7 +110,7 @@ ggplot(allbacks, aes(x=volume, y=weight, color=cover, shape=cover)) + geom_point
 - Paperbacks generally weigh less than hardcover books after controlling for book's volume.
 
 ---
-# Modeling weights of books using volume and cover type
+# Modeling using volume and cover type
 
 .code70[
 ```{r}

@@ -39,44 +39,6 @@ class: center, middle, inverse, title-slide
 ]
 
 
----
-class: inverse, middle, center
-# Data Project
-
----
-class: font90
-# Checklist / Suggested Outline
-
-* Abstract (300 word maximum)
-* Overview slide
-	* Context on the data collection
-	* Description of the dependent variable (what is being measured)
-	* Description of the independent variable (what is being measured; include at least 2 variables)
-	* Research question
-* Summary statistics
-* Include appropriate data visualizations.
-* Statistical output
-	* Include the appropriate statistics for your method used.
-	* For null hypothesis tests (e.g. t-test, chi-squared, ANOVA, etc.), state the null and alternative hypotheses along with relevant statistic and p-value (and confidence interval if appropriate).
-	* For regression models, include the regression output and interpret the R-squared value.
-* Conclusion
-	* Why is this analysis important?
-	* Limitations of the analysis?
-
----
-# Criteria for Grading
-
-* Data is presented to support the conslusions using the appropriate analysis (i.e. the statistical method chosen supports the research question).
-
-* Suitable tables summarize data in a clear and meaningful way even to those unfamiliar with the project.
-
-* Suitable graphics summarize data in a clear and meaningful way even to those unfamiliar with the project.
-
-* Data reviewed and analyzed accurately and coherently.
-
-* Proper use of descriptive and/or inferential statistics.
-
-Full rubric available here: https://fall2022.data606.net/assignments/project/
 
 ---
 # Weight of Books
@@ -155,7 +117,7 @@ summary(lm.out)
 - Paperbacks generally weigh less than hardcover books after controlling for book's volume.
 
 ---
-# Modeling weights of books using volume and cover type
+# Modeling using volume and cover type
 
 .code70[
 
@@ -210,7 +172,7 @@ $$ \hat{weight} = 198 + 0.72 volume - 184 coverpb $$
 
 &lt;center&gt;
 &lt;!-- html table generated in R 4.2.1 by xtable 1.8-4 package --&gt;
-&lt;!-- Wed Nov  9 21:24:36 2022 --&gt;
+&lt;!-- Wed Nov 16 19:27:13 2022 --&gt;
 &lt;table border=1&gt;
 &lt;tr&gt; &lt;th&gt;  &lt;/th&gt; &lt;th&gt; Estimate &lt;/th&gt; &lt;th&gt; Std. Error &lt;/th&gt; &lt;th&gt; t value &lt;/th&gt; &lt;th&gt; Pr(&amp;gt;|t|) &lt;/th&gt;  &lt;/tr&gt;
   &lt;tr&gt; &lt;td align="right"&gt; (Intercept) &lt;/td&gt; &lt;td align="right"&gt; 197.9628 &lt;/td&gt; &lt;td align="right"&gt; 59.1927 &lt;/td&gt; &lt;td align="right"&gt; 3.34 &lt;/td&gt; &lt;td align="right"&gt; 0.0058 &lt;/td&gt; &lt;/tr&gt;
@@ -315,7 +277,7 @@ print(xtable::xtable(anova.poverty, digits = 2), type='html')
 ```
 
 &lt;!-- html table generated in R 4.2.1 by xtable 1.8-4 package --&gt;
-&lt;!-- Wed Nov  9 21:24:37 2022 --&gt;
+&lt;!-- Wed Nov 16 19:27:15 2022 --&gt;
 &lt;table border=1&gt;
 &lt;tr&gt; &lt;th&gt;  &lt;/th&gt; &lt;th&gt; Df &lt;/th&gt; &lt;th&gt; Sum Sq &lt;/th&gt; &lt;th&gt; Mean Sq &lt;/th&gt; &lt;th&gt; F value &lt;/th&gt; &lt;th&gt; Pr(&amp;gt;F) &lt;/th&gt;  &lt;/tr&gt;
   &lt;tr&gt; &lt;td&gt; female_house &lt;/td&gt; &lt;td align="right"&gt; 1.00 &lt;/td&gt; &lt;td align="right"&gt; 132.57 &lt;/td&gt; &lt;td align="right"&gt; 132.57 &lt;/td&gt; &lt;td align="right"&gt; 18.68 &lt;/td&gt; &lt;td align="right"&gt; 0.00 &lt;/td&gt; &lt;/tr&gt;
@@ -352,7 +314,7 @@ print(xtable::xtable(lm.poverty2), type='html')
 ```
 
 &lt;!-- html table generated in R 4.2.1 by xtable 1.8-4 package --&gt;
-&lt;!-- Wed Nov  9 21:24:37 2022 --&gt;
+&lt;!-- Wed Nov 16 19:27:15 2022 --&gt;
 &lt;table border=1&gt;
 &lt;tr&gt; &lt;th&gt;  &lt;/th&gt; &lt;th&gt; Estimate &lt;/th&gt; &lt;th&gt; Std. Error &lt;/th&gt; &lt;th&gt; t value &lt;/th&gt; &lt;th&gt; Pr(&amp;gt;|t|) &lt;/th&gt;  &lt;/tr&gt;
   &lt;tr&gt; &lt;td align="right"&gt; (Intercept) &lt;/td&gt; &lt;td align="right"&gt; -2.5789 &lt;/td&gt; &lt;td align="right"&gt; 5.7849 &lt;/td&gt; &lt;td align="right"&gt; -0.45 &lt;/td&gt; &lt;td align="right"&gt; 0.6577 &lt;/td&gt; &lt;/tr&gt;
@@ -368,7 +330,7 @@ print(xtable::xtable(anova.poverty2, digits = 3), type='html')
 ```
 
 &lt;!-- html table generated in R 4.2.1 by xtable 1.8-4 package --&gt;
-&lt;!-- Wed Nov  9 21:24:37 2022 --&gt;
+&lt;!-- Wed Nov 16 19:27:15 2022 --&gt;
 &lt;table border=1&gt;
 &lt;tr&gt; &lt;th&gt;  &lt;/th&gt; &lt;th&gt; Df &lt;/th&gt; &lt;th&gt; Sum Sq &lt;/th&gt; &lt;th&gt; Mean Sq &lt;/th&gt; &lt;th&gt; F value &lt;/th&gt; &lt;th&gt; Pr(&amp;gt;F) &lt;/th&gt;  &lt;/tr&gt;
   &lt;tr&gt; &lt;td&gt; female_house &lt;/td&gt; &lt;td align="right"&gt; 1.000 &lt;/td&gt; &lt;td align="right"&gt; 132.568 &lt;/td&gt; &lt;td align="right"&gt; 132.568 &lt;/td&gt; &lt;td align="right"&gt; 18.745 &lt;/td&gt; &lt;td align="right"&gt; 0.000 &lt;/td&gt; &lt;/tr&gt;
@@ -394,7 +356,7 @@ $$ R^2 = \frac{explained \quad variability \quad in \quad y}{total \quad variabi
 poverty vs % female head of household
 
 &lt;!-- html table generated in R 4.2.1 by xtable 1.8-4 package --&gt;
-&lt;!-- Wed Nov  9 21:24:38 2022 --&gt;
+&lt;!-- Wed Nov 16 19:27:16 2022 --&gt;
 &lt;table border=1&gt;
 &lt;tr&gt; &lt;th&gt;  &lt;/th&gt; &lt;th&gt; Estimate &lt;/th&gt; &lt;th&gt; Std. Error &lt;/th&gt; &lt;th&gt; t value &lt;/th&gt; &lt;th&gt; Pr(&amp;gt;|t|) &lt;/th&gt;  &lt;/tr&gt;
   &lt;tr&gt; &lt;td align="right"&gt; (Intercept) &lt;/td&gt; &lt;td align="right"&gt; 3.3094 &lt;/td&gt; &lt;td align="right"&gt; 1.8970 &lt;/td&gt; &lt;td align="right"&gt; 1.74 &lt;/td&gt; &lt;td align="right"&gt; 0.0873 &lt;/td&gt; &lt;/tr&gt;
@@ -404,7 +366,7 @@ poverty vs % female head of household
 poverty vs % female head of household and % female household
 
 &lt;!-- html table generated in R 4.2.1 by xtable 1.8-4 package --&gt;
-&lt;!-- Wed Nov  9 21:24:38 2022 --&gt;
+&lt;!-- Wed Nov 16 19:27:16 2022 --&gt;
 &lt;table border=1&gt;
 &lt;tr&gt; &lt;th&gt;  &lt;/th&gt; &lt;th&gt; Estimate &lt;/th&gt; &lt;th&gt; Std. Error &lt;/th&gt; &lt;th&gt; t value &lt;/th&gt; &lt;th&gt; Pr(&amp;gt;|t|) &lt;/th&gt;  &lt;/tr&gt;
   &lt;tr&gt; &lt;td align="right"&gt; (Intercept) &lt;/td&gt; &lt;td align="right"&gt; -2.5789 &lt;/td&gt; &lt;td align="right"&gt; 5.7849 &lt;/td&gt; &lt;td align="right"&gt; -0.45 &lt;/td&gt; &lt;td align="right"&gt; 0.6577 &lt;/td&gt; &lt;/tr&gt;
