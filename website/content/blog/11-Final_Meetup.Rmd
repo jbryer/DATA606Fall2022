@@ -1,0 +1,24 @@
+---
+title: "Final Meetup"
+author: "Jason Bryer and Angela Lui"
+date: 2022-12-07
+draft: false
+categories: ["Meetups"]
+tags: ["Annoucement"]
+---
+
+
+[Click here](/slides/11-Final_Meetup.html#1) to open the slides ([PDF](/slides/11-Final_Meetup.pdf)).
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3LvlFyKRuZc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<!--more-->
+
+[Click here](/slides/11-Final_Meetup.html#1) to open the slides ([PDF](/slides/11-Final_Meetup.pdf)).
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3LvlFyKRuZc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+Quarto is the next version of Rmarkdown: https://quarto.org
+Link to other R related talks: https://albanyrusers.org
+ShinyQDA Repo: https://github.com/jbryer/ShinyQDA
+
